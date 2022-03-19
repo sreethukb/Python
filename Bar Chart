@@ -1,0 +1,11 @@
+#Program to plot a bar chart in python to display the result of a school for five consecutive years.
+#using matplotlib module for plotting
+
+import matplotlib.pyplot as pl
+year=['2015','2016','2017','2018','2019']
+p=[98.50,70.25,55.20,90.5,61.50]
+j=['b','g','r','m','c']
+pl.bar(year,p,width=0.2,color=j)
+pl.xlabel("Year")
+pl.ylabel("Pass %")
+pl.show()
