@@ -1,0 +1,40 @@
+#A stack is a linear data structure that stores items in a Last-In/First-Out (LIFO) or First-In/Last-Out (FILO) manner. In stack, a new element is added at one end and an element is removed from that end only. The insert and delete operations are often called push and pop.
+#Python’s built-in data structure list can be used as a stack. Instead of push(), append() is used to add elements to the top of the stack while pop() removes the element in LIFO order. 
+'''The functions associated with stack are:
+
+empty() – Returns whether the stack is empty – Time Complexity: O(1)
+size() – Returns the size of the stack – Time Complexity: O(1)
+top() – Returns a reference to the topmost element of the stack – Time Complexity: O(1)
+push(a) – Inserts the element ‘a’ at the top of the stack – Time Complexity: O(1)
+pop() – Deletes the topmost element of the stack – Time Complexity: O(1) '''
+
+#__main__
+stack=[0,0,0,0,0]       #[0,0,0,0,0]
+top=-1                  # 0,1,2,3,4
+n=1
+while n:
+    print("Enter 1 to push element in stack ")
+    print("Enter 2 to pop element from stack ")
+    print("Enter 3 to peek the top most element in stack ")
+    print("Enter 4 to exit ")
+    ch=int(input("Enter your choice: "))
+    if ch==1:
+        if top==4:
+            print("Cannot insert. Stack is full.")
+            print("Overflow!!")
+        else:
+            top+=1
+            stack[top]=int(input("Enter the number: "))
+    elif ch==2:
+        if top==-1:
+            print("Stack is empty. Please insert elements to pop out.")
+            print("Underflow!!")
+        else:
+            print("The element popped out is",stack[top])
+            top-=1
+    elif ch==3:
+        print("The top most element is",stack[top])
+    elif ch==4:
+        n=0
+    else:
+        print("Invalid choice")
