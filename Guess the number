@@ -1,0 +1,19 @@
+'''This program takes an input from the user. The computer generates another random number using the 'random' module. If the user-input number and the computer generated 
+number are same, the screen will display a message saying you have guessed the number right, otherwise not. For this, an if-else statement is used.
+We are using 'random.randrange()' function. It is similar to the range() function.
+Syntax:
+random.randrange(start, stop, step)
+Here:
+start - integer specifying at which position to start. Default=0 (included) (optional)
+stop - integer specifying at which position to end. (excluded) (required)
+step - integer specifying the incrementation. Default=1 (optional) '''
+
+#__main__
+import random
+num=(int(input("Enter any number between 1 and 10: ")))
+x=random.randrange(1,10)
+print("The system generated number is: ",x)
+if x==num:
+    print("Yayy!!! You guessed it right!")
+else:
+    print("Oopsies, wrong guess! Try again?")
